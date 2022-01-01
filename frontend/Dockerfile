@@ -6,4 +6,4 @@ RUN npm install
 COPY . .
 RUN npm install -g @angular/cli 
 EXPOSE 4200
-CMD ng serve --aot --o --disableHostCheck true
+CMD ng serve --aot --o --host 0.0.0.0 --disableHostCheck true
