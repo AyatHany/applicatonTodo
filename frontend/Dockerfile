@@ -1,4 +1,5 @@
 FROM node AS build
+RUN mkdir -p /home/todo
 WORKDIR /home/frontend
 COPY package*.json /home/frontend
 RUN npm install
