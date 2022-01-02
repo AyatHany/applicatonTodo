@@ -2,7 +2,7 @@ require('dotenv');
 const router=require('express').Router()
 const Todo_model=require('../models/todo')
 var mongoose = require('mongoose');
-var db=mongoose.connect('mongodb://'+process.env.IPADDRESS+':27017/?directConnection=true&serverSelectionTimeoutMS=2000',function(err,response){
+var db=mongoose.connect('mongodb://ayat:ayat@'+process.env.IPADDRESS+':27017/?directConnection=true&serverSelectionTimeoutMS=2000',function(err,response){
   if(err) console.log("there is error");
   console.log("----database is working with tasks---- ");
 })
