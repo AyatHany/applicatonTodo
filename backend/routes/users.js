@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 const User = require('../models/User');
-var db=mongoose.connect('mongodb://'+process.env.IPADDRESS+':27017/?directConnection=true&serverSelectionTimeoutMS=2000',function(err,response){
+var db=mongoose.connect('mongodb://ayat:ayat@'+process.env.IPADDRESS+':27017/mongo?directConnection=true&serverSelectionTimeoutMS=2000',function(err,response){
   if(err) console.log("there is error");
   console.log("----database is working with users----");
 })
