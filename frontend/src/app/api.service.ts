@@ -11,11 +11,11 @@ export class ApiService {
       console.log(res);
     })
   }
-  /*logoutUser(){
-    this.http.get('http://backend2-todoapp.apps.eu45.prod.nextcle.com/').subscribe(res=>{
+  logoutUser(){
+    this.http.get('http://backend2-todoapp.apps.eu45.prod.nextcle.com/api/usrlogin').subscribe(res=>{
       console.log(res);
     })
-  }*/
+  }
   loginUser(user: any){
     this.http.post('http://backend2-todoapp.apps.eu45.prod.nextcle.com/api/userlogin',user).subscribe(res=>{
       console.log(res);
