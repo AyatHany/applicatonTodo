@@ -7,15 +7,15 @@ import { HttpClient} from '@angular/common/http';
 export class ApiService {
   constructor(private http:HttpClient) { }
   registerUser(user: any){
-    this.http.post('http://backend2-todoapp.apps.eu45.prod.nextcle.com/api/users',user).subscribe(res=>{
+    this.http.post('http://backend2-todoapp.apps.eu45.prod.nextcle.com/api/user',user).subscribe(res=>{
       console.log(res);
     })
   }
-  logoutUser(){
+  /*logoutUser(){
     this.http.get('http://backend2-todoapp.apps.eu45.prod.nextcle.com/').subscribe(res=>{
       console.log(res);
     })
-  }
+  }*/
   loginUser(user: any){
     this.http.post('http://backend2-todoapp.apps.eu45.prod.nextcle.com/api/userlogin',user).subscribe(res=>{
       console.log(res);
@@ -32,7 +32,7 @@ export class ApiService {
   })
 }
   public gettasks(){
-    this.http.get('http://backend2-todoapp.apps.eu45.prod.nextcle.com/api/tasks').subscribe(res=>{
+    this.http.get('http://localhost:3000/api/tasks').subscribe(res=>{
       console.log(res);
     })
 }
