@@ -1,9 +1,10 @@
 FROM node AS build
 RUN mkdir -p /home/frontend
 WORKDIR /home/frontend
-COPY package*.json /home/frontend
+RUN chown -R root:$(whoami) /home/frontend
+RUN chmod -R 777 /home/frontend
+ADD package*.json /home/fontend
 RUN npm install
-COPY . .
-RUN npm install -g @angular/cli 
+ADD . .
 EXPOSE 4200
-CMD ng serve --host 0.0.0.0 --disable-host-check true
+CMD npm start
