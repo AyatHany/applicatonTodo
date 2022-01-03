@@ -7,7 +7,7 @@ import { HttpClient} from '@angular/common/http';
 export class ApiService {
   constructor(private http:HttpClient) { }
   registerUser(user: any){
-    this.http.post('http://backend2-todoapp.apps.eu45.prod.nextcle.com/api/user',user).subscribe(res=>{
+    this.http.post('http://backend2-todoapp.apps.eu45.prod.nextcle.com/api/users',user).subscribe(res=>{
       console.log(res);
     })
   }
