@@ -3,7 +3,7 @@ RUN mkdir -p /home/frontend
 WORKDIR /home/frontend
 RUN chown -R root:$(whoami) /home/frontend
 RUN chmod -R 777 /home/frontend
-ADD package*.json /home/fontend
+ADD package*.json /home/frontend
 RUN npm install
 ADD . .
 EXPOSE 4200
